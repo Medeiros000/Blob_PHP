@@ -1,0 +1,25 @@
+{
+    "name": "ceounset/cursophp8",
+    "description": "Curso de PHP 8",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "sistema\\": "./sistema/"
+        },
+        "files": [
+            "sistema/configuracao.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jr Medeiros",
+            "email": "medeiros-000@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.0",
+        "pecee/simple-router": "dev-master",
+        "twig/twig": "4.x-dev"
+    }
+}
