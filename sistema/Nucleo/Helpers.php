@@ -130,7 +130,7 @@ class Helpers
         return filter_var($url, FILTER_VALIDATE_URL);
     }
 
-    public static function url(string $url): string
+    public static function url(string $url = null): string
     {
         $servidor = filter_var($_SERVER['SERVER_NAME']);
         echo $servidor . '<br>';
