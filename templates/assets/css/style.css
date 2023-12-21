@@ -196,6 +196,7 @@ form {
 
 form label {
     display: block;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 0.8em;
     font-weight: 100;

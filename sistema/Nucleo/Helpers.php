@@ -133,7 +133,6 @@ class Helpers
     public static function url(string $url = null): string
     {
         $servidor = filter_var($_SERVER['SERVER_NAME']);
-        echo $servidor . '<br>';
         $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
         if (str_starts_with($url, '/')) {
