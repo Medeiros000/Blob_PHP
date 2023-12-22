@@ -20,6 +20,14 @@ class SiteControlador extends Controlador
         ]);
     }
 
+    public function precos(): void
+    {
+        echo $this->template->renderizar('precos.html', [
+            'titulo' => 'Preços',
+            'subtitulo' => 'força de vontade'
+        ]);
+    }
+
     public function sobre(): void
     {
         echo $this->template->renderizar('sobre.html', [

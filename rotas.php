@@ -6,8 +6,10 @@ use Pecee\SimpleRouter\SimpleRouter;
 
 SimpleRouter::setDefaultNamespace('sistema\Controlador');
 
-SimpleRouter::get('/blog', 'SiteControlador@index');
+SimpleRouter::get(URL_SITE, 'SiteControlador@index');
 
-SimpleRouter::get('/blog/sobre', 'SiteControlador@sobre');
+SimpleRouter::get(URL_SITE.'precos', 'SiteControlador@precos');
+
+SimpleRouter::get(URL_SITE.'sobre-nos', 'SiteControlador@sobre');
 
 SimpleRouter::start();

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'ceounset/cursophp8',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '6ed9643c37fe814d69fb581f2147802b75e3ed4a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'ceounset/cursophp8' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '6ed9643c37fe814d69fb581f2147802b75e3ed4a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -62,7 +62,7 @@
         'twig/twig' => array(
             'pretty_version' => '4.x-dev',
             'version' => '4.9999999.9999999.9999999-dev',
-            'reference' => 'd27c50850dbe0d281c9937cbdaa3d40b39fdee3f',
+            'reference' => 'd1824b237bfcee63ef70c3ac28ff0b2ef511c64e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),

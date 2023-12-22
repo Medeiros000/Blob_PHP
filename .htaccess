@@ -9,4 +9,4 @@ RewriteCond %{SCRIPT_FILINAME} !-f
 RewriteCond %{SCRIPT_FILINAME} !-d
 RewriteCond %{SCRIPT_FILINAME} !-l
 
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ index.php?url=$1

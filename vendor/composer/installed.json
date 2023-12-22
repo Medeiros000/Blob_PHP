@@ -318,12 +318,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d27c50850dbe0d281c9937cbdaa3d40b39fdee3f"
+                "reference": "d1824b237bfcee63ef70c3ac28ff0b2ef511c64e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d27c50850dbe0d281c9937cbdaa3d40b39fdee3f",
-                "reference": "d27c50850dbe0d281c9937cbdaa3d40b39fdee3f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d1824b237bfcee63ef70c3ac28ff0b2ef511c64e",
+                "reference": "d1824b237bfcee63ef70c3ac28ff0b2ef511c64e",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 "psr/container": "^1.0|^2.0",
                 "symfony/phpunit-bridge": "^5.4.9|^6.3|^7.0"
             },
-            "time": "2023-12-19T07:20:44+00:00",
+            "time": "2023-12-20T19:50:18+00:00",
             "type": "library",
             "installation-source": "source",
             "autoload": {
