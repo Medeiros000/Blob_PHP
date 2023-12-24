@@ -15,8 +15,16 @@ class SiteControlador extends Controlador
     public function index(): void
     {
         echo $this->template->renderizar('index.html', [
-            'titulo' => 'Teste de título',
+            'titulo' => 'Home',
             'subtitulo' => 'teste de subtitulo'
+        ]);
+    }
+
+    public function features(): void
+    {
+        echo $this->template->renderizar('features.html', [
+            'titulo' => 'Features',
+            'subtitulo' => 'força de vontade'
         ]);
     }
 
@@ -28,6 +36,14 @@ class SiteControlador extends Controlador
         ]);
     }
 
+    public function faqs(): void
+    {
+        echo $this->template->renderizar('faqs.html', [
+            'titulo' => 'Faqs',
+            'subtitulo' => 'força de vontade'
+        ]);
+    }
+
     public function sobre(): void
     {
         echo $this->template->renderizar('sobre.html', [
@@ -35,4 +51,5 @@ class SiteControlador extends Controlador
             'subtitulo' => 'força de vontade'
         ]);
     }
+    
 }
