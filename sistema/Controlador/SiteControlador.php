@@ -52,4 +52,19 @@ class SiteControlador extends Controlador
         ]);
     }
     
+    public function login(): void
+    {
+        echo $this->template->renderizar('login.html', [
+            'titulo' => 'Login',
+            'subtitulo' => 'força de vontade'
+        ]);
+    }
+
+    public function signup(): void
+    {
+        echo $this->template->renderizar('signup.html', [
+            'titulo' => 'Sign up',
+            'subtitulo' => 'força de vontade'
+        ]);
+    }
 }

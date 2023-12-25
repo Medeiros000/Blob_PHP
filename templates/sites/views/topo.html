@@ -24,12 +24,26 @@
         <li>
           <a href="{{ url() }}" class="nav-link px-2 text-secondary">Home</a>
         </li>
-        <li><a href="{{ url('features')}}" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="
-            {{ url('precos') }}" class="nav-link px-2 text-white">Preços</a></li>
-          <li><a href="{{url('faqs')}}" class="nav-link px-2 text-white">FAQs</a></li>
         <li>
-          <a href="{{ url('sobre-nos')}}" class="nav-link px-2 text-white">Sobre</a>
+          <a href="{{ url('features')}}" class="nav-link px-2 text-white"
+            >Features</a
+          >
+        </li>
+        <li>
+          <a
+            href="
+            {{ url('precos') }}"
+            class="nav-link px-2 text-white"
+            >Preços</a
+          >
+        </li>
+        <li>
+          <a href="{{url('faqs')}}" class="nav-link px-2 text-white">FAQs</a>
+        </li>
+        <li>
+          <a href="{{ url('sobre-nos')}}" class="nav-link px-2 text-white"
+            >Sobre</a
+          >
         </li>
       </ul>
 
@@ -43,8 +57,16 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button
+          onclick="window.location.href='{{ url('login') }}'"
+          type="button"
+          class="btn btn-outline-light me-2"
+        >
+          Login
+        </button>
+        <button
+        onclick="window.location.href='{{ url('signup') }}'"
+        type="button" class="btn btn-warning">Sign-up</button>
       </div>
     </div>
   </div>
