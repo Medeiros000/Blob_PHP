@@ -14,7 +14,10 @@
       rel="stylesheet"
       href="{{url('templates/sites/assets/css/site.css')}}"
     />
-    <title>Base html</title>
+    <title>
+      {% if titulo %} {{titulo}} {% else %} {{constant('SITE_NOME')}} {% endif
+      %}
+    </title>
   </head>
   <body>
     {% include 'topo.html' %} {% block conteudo %} {% endblock %} {% include

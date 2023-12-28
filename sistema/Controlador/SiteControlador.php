@@ -51,7 +51,7 @@ class SiteControlador extends Controlador
             'subtitulo' => 'força de vontade'
         ]);
     }
-    
+
     public function login(): void
     {
         echo $this->template->renderizar('login.html', [
