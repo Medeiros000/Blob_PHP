@@ -2,9 +2,20 @@
 
 namespace sistema\Nucleo;
 
+use Exception;
+
 class Helpers
 {
 
+    public static function redirecionar(string $url = null): void
+    {
+        header('HTTP/1.1 302 Found');
+
+        $local = ($url ? self::url($url) : self::url());
+
+        header("Location: {$local}");
+        exit;
+    }
     /**
      * Retorna com uma saudação de acordo com a hora do dia
      */
@@ -224,7 +235,7 @@ class Helpers
     {
         $cpf = self::limparNumero($cpf);
         if (mb_strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
-            return false;
+            throw new Exception('O CPF precisa ter 11 digitos');
         }
         for ($t = 9; $t < 11; $t++) {
             for ($d = 0, $c = 0; $c < $t; $c++) {
@@ -232,7 +243,7 @@ class Helpers
             }
             $d = ((10 * $d) % 11) % 100;
             if ($cpf[$c] != $d) {
-                return false;
+                throw new Exception('CPF Inválido');
             }
         }
         return true;

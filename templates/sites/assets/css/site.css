@@ -1,0 +1,20 @@
+.form-control::placeholder {
+    color: white;
+}
+
+
+
+#search::placeholder {
+    color: white;
+}
+
+::placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: red;
+}

@@ -1,9 +1,18 @@
 <?php
 
+use sistema\Nucleo\Conexao;
+
 require 'vendor/autoload.php';
 
 require 'rotas.php';
 
-// echo SITE_NOME . '<br>';
+// echo $_POST['nome'].'<hr>';
+// echo $_POST['senha'].'<hr>';
 
-// echo sistema\Nucleo\Helpers::saudacao();
+// $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+// if(isset($dados)) {
+//     echo $dados['nome'].'<hr>';
+//     echo $dados['senha'].'<hr>';
+// }
+
+?>

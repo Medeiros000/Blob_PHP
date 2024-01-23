@@ -5,8 +5,8 @@ RewriteEngine On
 
 RewriteBase /blog/
 
-RewriteCond %{SCRIPT_FILINAME} !-f
-RewriteCond %{SCRIPT_FILINAME} !-d
-RewriteCond %{SCRIPT_FILINAME} !-l
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
 
 RewriteRule ^(.*)$ index.php?url=$1
