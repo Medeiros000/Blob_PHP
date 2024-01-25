@@ -42,6 +42,11 @@ class Template
                 new \Twig\TwigFunction('resumirTexto', function(string $texto, int $limite){
                     return Helpers::resumirTexto($texto, $limite);
                 })
+            ),
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('loadFilesDir', function(string $texto){
+                    return Helpers::loadFilesDir($texto);
+                })
             )
         );
     }

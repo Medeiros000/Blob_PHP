@@ -248,4 +248,21 @@ class Helpers
         }
         return true;
     }
+
+    public static function loadFilesDir(string $dir): array
+    {
+        $arquivos = [];
+        if (is_dir($dir)) {
+            if ($dh = opendir($dir)) {
+                while (($file = readdir($dh)) != false) {
+                    if (preg_match('/.gif|.bmp|.png|.jpg|.jpeg/', $file)) {
+                        $a = "{$dir}{$file}";
+                        array_push($arquivos, $a);
+                    }
+                }
+                closedir($dh);
+            }
+        }
+        return $arquivos;
+    }
 }

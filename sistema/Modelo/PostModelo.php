@@ -29,4 +29,14 @@ class PostModelo
 
         return $result;
     }
+
+    public function pesquisa(string $texto): array
+    {
+        $query = "select * from posts where status = 1 and title like '%{$texto}%'";
+        $stmt = Conexao::getInstancia()->query($query);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
 }

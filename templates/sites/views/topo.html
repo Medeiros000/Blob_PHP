@@ -28,16 +28,17 @@
         </li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-        <input type="search" class="form-control form-control-dark bg-light text-dark " id="search"
+      <form action="{{ url('buscar') }}" method="post" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" name="busca" class="form-control form-control-dark bg-light text-dark " id="search"
           placeholder="Buscar..." aria-label="Search" />
+        <!-- <input type="submit"> -->
       </form>
 
       <div class="text-end">
-        <button onclick="window.location.href='{{ url('login') }}'" type="button" class="btn btn-outline-light me-2">
+        <button onclick="window.location.href=`{{ url('login') }}`" type="button" class="btn btn-outline-light me-2">
           Entrar
         </button>
-        <button onclick="window.location.href='{{ url('signup') }}'" type="button" class="btn btn-warning">
+        <button onclick="window.location.href=`{{ url('signup') }}`" type="button" class="btn btn-warning">
           Cadastre-se
         </button>
       </div>

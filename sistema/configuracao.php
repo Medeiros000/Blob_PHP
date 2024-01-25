@@ -14,7 +14,7 @@ define('SITE_NOME', 'UnSet');
 define('SITE_DESCRICAO', 'UnSet - Tecnologia em Sistemas');
 
 // urls do sistema
-define('URL_PRODUCAO', 'http://medeirosdev.ddns.net/blog');
+define('URL_PRODUCAO', 'http://192.168.1.100/blog');
 define('URL_DESENVOLVIMENTO', 'http://localhost/blog');
 
 define('URL_SITE', 'blog/');

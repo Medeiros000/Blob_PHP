@@ -1,17 +1,15 @@
 <?php
 
-// namespace Rotas;
-
 use Pecee\SimpleRouter\SimpleRouter;
-
 use sistema\Nucleo\Helpers;
 
-SimpleRouter::setDefaultNamespace('sistema\Controlador');
-
 try {
+    SimpleRouter::setDefaultNamespace('sistema\Controlador');
+
     SimpleRouter::get(URL_SITE, 'SiteControlador@index');
     SimpleRouter::get(URL_SITE . 'post/{id}', 'SiteControlador@post');
     SimpleRouter::get(URL_SITE . 'categoria/{id}', 'SiteControlador@categoria');
+    SimpleRouter::post(URL_SITE . 'buscar', 'SiteControlador@buscar');
     SimpleRouter::get(URL_SITE . 'features', 'SiteControlador@features');
     SimpleRouter::get(URL_SITE . 'precos', 'SiteControlador@precos');
     SimpleRouter::get(URL_SITE . 'faqs', 'SiteControlador@faqs');

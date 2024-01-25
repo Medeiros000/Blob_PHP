@@ -31,6 +31,17 @@ class SiteControlador extends Controlador
         ]);
     }
 
+    public function buscar(): void
+    {
+        $busca = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+        $posts = (isset($busca) ? (new PostModelo())->pesquisa($busca['busca']) : 'falhou');
+        echo $this->template->renderizar('buscar.html', [
+            'titulo' => 'Home',
+            'posts' => $posts,
+            'categorias' => $this->categorias()
+        ]);
+    }
+
     public function post(int $id): void
     {
         $post = (new PostModelo())->buscaPorId($id);
@@ -79,15 +90,14 @@ class SiteControlador extends Controlador
 
     public function sobre(): void
     {
-        $sc = 'templates/sites/assets/img';
-        $img0 = "$sc/1.jpg";
-        $imgs =  ["$sc/2.jpg", "$sc/3.jpg"];
-        // var_dump($img);
+        $imgs = Helpers::loadFilesDir('templates/sites/assets/img/crsl/');
+        $imgMain = $imgs[0] ?? null;
+        unset($imgs[0]);
         echo $this->template->renderizar('sobre.html', [
             'titulo' => 'Sobre Nós',
             'subtitulo' => 'força de vontade',
             'categorias' => $this->categorias(),
-            'img0' => $img0,
+            'img0' => $imgMain,
             'imgs' => $imgs
         ]);
     }
