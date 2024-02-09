@@ -27,15 +27,29 @@ sobre PHP.
 
 [Bootstrap](https://getbootstrap.com/) - Frontend toolkit.
 
+[MySQL PDO](https://www.mysql.com/) - Extensão para banco de dados MySQL.
+
 ## Deploy
 
 Para fazer o deploy desse projeto rode dentro da pasta 'htdocs' de um servidor Apache ou utilize a imagem docker
 
+###### Comando para criar a imagem com o DB Blog necessário.
 ```bash
   docker build --pull --rm -f "dockerfile" -t blog:latest "." 
 ```
+###### Comando para rodar a imagem criada anteriormente.
 ```bash
   docker run --rm -d -p 80:80/tcp blog:latest 
+```
+
+## DB MySQL
+
+- [MySQL](https://www.mysql.com/) - Dentro da raiz do projeto encontra-se uma pasta "mysql-docker" para montar a imagem do DB necessário além do arquivo "blog.sql" com os comandos necessários para "povoar" o DB.
+
+##### Deve-se alterar esta linha dentro do arquivo de configurações caso você use um MySQL diferente da imagem contida no projeto.
+```bash
+  // Senha do DB
+  define('DB_PSSWRD', '');
 ```
 
 ## Autores
