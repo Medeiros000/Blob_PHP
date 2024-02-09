@@ -27,7 +27,7 @@ sobre PHP.
 
 [Bootstrap](https://getbootstrap.com/) - Frontend toolkit.
 
-[MySQL PDO](https://www.mysql.com/) - Extensão para banco de dados MySQL.
+[MySQL PDO]([https://www.mysql.com/](https://www.php.net/manual/en/ref.pdo-mysql.php)) - Extensão para banco de dados MySQL.
 
 ## Deploy
 
