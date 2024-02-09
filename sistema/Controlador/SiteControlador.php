@@ -7,6 +7,9 @@ use sistema\Modelo\PostModelo;
 use sistema\Modelo\CategoriaModelo;
 use sistema\Nucleo\Helpers;
 
+/**
+ * @author Jr Medeiros
+ */
 class SiteControlador extends Controlador
 {
 
@@ -48,7 +51,6 @@ class SiteControlador extends Controlador
         if (!$post) {
             Helpers::redirecionar('404');
         }
-
         echo $this->template->renderizar('post.html', [
             'post' => $post,
             'categorias' => $this->categorias()

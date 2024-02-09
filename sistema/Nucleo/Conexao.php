@@ -11,7 +11,6 @@ use PDOException;
  * 
  * @author Jr Medeiros
  */
-
 class Conexao
 {
 
