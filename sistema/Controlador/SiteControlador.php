@@ -94,6 +94,7 @@ class SiteControlador extends Controlador
     public function sobre(): void
     {
         $imgs = Helpers::loadFilesDir('templates/sites/assets/img/crsl/');
+        sort($imgs, SORT_REGULAR);
         $imgMain = $imgs[0] ?? null;
         unset($imgs[0]);
         echo $this->template->renderizar('sobre.html', [
