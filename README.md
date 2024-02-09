@@ -46,10 +46,13 @@ Para fazer o deploy desse projeto rode dentro da pasta 'htdocs' de um servidor A
 
 - [MySQL](https://www.mysql.com/) - Dentro da raiz do projeto encontra-se uma pasta "mysql-docker" para montar a imagem do DB necessário além do arquivo "blog.sql" com os comandos necessários para "povoar" o DB.
 
-##### Deve-se alterar esta linha dentro do arquivo de configurações caso você use um MySQL diferente da imagem contida no projeto.
+##### Deve-se alterar estas linhas dentro do arquivo de configurações caso você use um MySQL diferente da imagem contida no projeto.
 ```bash
-  // Senha do DB
-  define('DB_PSSWRD', '');
+12  define('DB_PSSWRD', '');
+...
+15  define('DB_PORT', '3306');
+16  define('DB_NAME', 'blog');
+17  define('DB_USER', 'root');
 ```
 
 ## Autores
