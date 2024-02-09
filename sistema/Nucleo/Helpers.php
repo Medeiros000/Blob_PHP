@@ -146,6 +146,9 @@ class Helpers
         $servidor = filter_var($_SERVER['SERVER_NAME']);
         $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
 
+        if ($url == null) {
+            return $ambiente;
+        }
         if (str_starts_with($url, '/')) {
             return $ambiente . $url;
         }
@@ -160,6 +163,17 @@ class Helpers
         }
         return false;
     }
+
+    public static function db_local(): bool
+    {
+        $raiz = filter_var($_SERVER['DOCUMENT_ROOT']);
+        if ($raiz == '/var/www/html') {
+            return true;
+        }
+        return false;
+
+    }
+
     public static function dataAtual(): string
     {
         $diaMes = date('d');

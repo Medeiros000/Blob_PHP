@@ -1,0 +1,19 @@
+# Selecionando a imagem de MySQL
+FROM mysql:latest
+
+# Definindo a variável de ambiente para a senha do root
+ARG ROOT_PASSWORD=123456
+ENV MYSQL_ROOT_PASSWORD=${ROOT_PASSWORD}
+
+# Definindo a variável de ambiente para o nome do banco de dados
+ARG DATABASE_NAME=blog
+ENV MYSQL_DATABASE=${DATABASE_NAME}
+
+# Copiando o arquivo de inicialização do banco de dados
+COPY ./blog.sql /docker-entrypoint-initdb.d/blog.sql
+
+# Expondo a porta 3306
+EXPOSE 3306
+
+# Definindo o comando de inicialização do container
+CMD ["mysqld"]

@@ -2,8 +2,11 @@
 // Arquivo de configuração do sistema
 // define o fuso horário
 date_default_timezone_set("America/Sao_Paulo");
-// date_default_timezone_set('Asia/Pyongyang');
+
+// Host do DB
 define('DB_HOST', 'localhost');
+define('DB_HOST_DOCKER', 'host.docker.internal');
+
 define('DB_PORT', '3306');
 define('DB_NAME', 'blog');
 define('DB_USER', 'root');

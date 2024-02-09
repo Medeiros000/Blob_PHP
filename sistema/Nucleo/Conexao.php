@@ -19,9 +19,10 @@ class Conexao
 
     public static function getInstancia(): PDO
     {
+        $DB = (Helpers::db_local() == true ? DB_HOST_DOCKER : DB_HOST);
         if (empty(self::$instancia)) {
             try {
-                self::$instancia = new PDO('mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME, DB_USER, DB_PSSWRD, [
+                self::$instancia = new PDO('mysql:host=' . $DB . ';port=' . DB_PORT . ';dbname=' . DB_NAME, DB_USER, DB_PSSWRD, [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
                     PDO::ATTR_CASE => PDO::CASE_NATURAL

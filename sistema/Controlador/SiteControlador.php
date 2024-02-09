@@ -59,7 +59,8 @@ class SiteControlador extends Controlador
     {
         echo $this->template->renderizar('features.html', [
             'titulo' => 'Features',
-            'subtitulo' => 'força de vontade'
+            'subtitulo' => 'força de vontade',
+            'categorias' => $this->categorias()
         ]);
     }
 
@@ -67,7 +68,8 @@ class SiteControlador extends Controlador
     {
         echo $this->template->renderizar('precos.html', [
             'titulo' => 'Preços',
-            'subtitulo' => 'força de vontade'
+            'subtitulo' => 'força de vontade',
+            'categorias' => $this->categorias()
         ]);
     }
 
@@ -75,7 +77,8 @@ class SiteControlador extends Controlador
     {
         echo $this->template->renderizar('faqs.html', [
             'titulo' => 'Faqs',
-            'subtitulo' => 'força de vontade'
+            'subtitulo' => 'força de vontade',
+            'categorias' => $this->categorias()
         ]);
     }
 
@@ -115,7 +118,8 @@ class SiteControlador extends Controlador
     {
         echo $this->template->renderizar('signup.html', [
             'titulo' => 'Sign up',
-            'subtitulo' => 'força de vontade'
+            'subtitulo' => 'força de vontade',
+            'categorias' => $this->categorias()
         ]);
     }
 

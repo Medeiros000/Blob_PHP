@@ -47,6 +47,11 @@ class Template
                 new \Twig\TwigFunction('loadFilesDir', function(string $texto){
                     return Helpers::loadFilesDir($texto);
                 })
+            ),
+            $this->twig->addFunction(
+                new \Twig\TwigFunction('db_local', function(){
+                    return Helpers::db_local();
+                })
             )
         );
     }
