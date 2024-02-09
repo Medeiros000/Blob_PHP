@@ -1,2 +1,2 @@
 # Blog_PHP
-Blog em PHP utilizando Composer
+Blog em PHP utilizando Composer e Docker
