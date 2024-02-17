@@ -25,3 +25,4 @@ define('URL_PRODUCAO', 'http://192.168.1.100/blog');
 define('URL_DESENVOLVIMENTO', 'http://localhost/blog');
 
 define('URL_SITE', 'blog/');
+define('URL_ADMIN', 'blog/admin/');
