@@ -2,7 +2,6 @@
 
 namespace sistema\Nucleo;
 
-use Exception;
 use PDO;
 use PDOException;
 
@@ -23,8 +22,11 @@ class Conexao
         if (empty(self::$instancia)) {
             try {
                 self::$instancia = new PDO('mysql:host=' . $DB . ';port=' . DB_PORT . ';dbname=' . DB_NAME, DB_USER, $PSSWRD, [
+                    // Todo erro é tratado como exceção
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    // Converte o resultado das consultas em objetos
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+                    // Força as colunas a ter o mesmo nome que na tabela
                     PDO::ATTR_CASE => PDO::CASE_NATURAL
                 ]);
             } catch (PDOException $ex) {
