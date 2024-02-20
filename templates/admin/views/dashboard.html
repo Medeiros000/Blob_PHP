@@ -1,16 +1,24 @@
 {% extends 'base.html' %}
 {% block corpo %}
+<div class="wrapper d-flex align-items-stretch">
+    {% include 'menu.html' %}
 
-<div class="row">
-    <div class="col-lg-3">
-        {% include 'menu.html' %}
-    </div>
-    <div class="col-lg-9">
-        {% block conteudo %}
-        <h1>DASHBOARD BEM VINDO</h1>
-        {% endblock %}
+    <div class="wrapper">
+        {% include 'topo.html' %}
+        <main>
+            {% block conteudo %}
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white border-0">
+                    <h5 class="card-title">Dashboard</h5>
+                </div>
+                <div class="card-body">
+                    Conteúdo em desenvolvimento
+                </div>
+            </div>
+            {% endblock %}
+        </main>
+        {% include 'rodape.html' %}
+
     </div>
 </div>
-
-
 {% endblock %}

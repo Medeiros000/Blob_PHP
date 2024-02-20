@@ -20,6 +20,10 @@ try {
 
     SimpleRouter::group(['namespace' => 'Admin'], function () {
         SimpleRouter::get(URL_ADMIN . 'dashboard', 'AdminDashboard@dashboard');
+        // Admin Posts
+        SimpleRouter::get(URL_ADMIN . 'posts/listar', 'AdminPosts@listar');
+        SimpleRouter::get(URL_ADMIN . 'categorias/listar', 'AdminCategorias@listar');
+        SimpleRouter::get(URL_ADMIN . 'usuarios/listar', 'AdminUsuarios@listar');
     });
 
     SimpleRouter::start();

@@ -1,7 +1,37 @@
-<ul class="list-group">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-  </ul>
+<nav id="sidebar" class="active">
+    <div class="sidebarLogo">
+        <a href="{{url('admin/dashboard')}}" data-bs-toggle="tooltip" title="Página Inicial">
+            <div class="logo">
+                <img src="{{url('templates/admin/assets/img/php.png')}}" style="width: 64px; height: 64px;" alt="{{constant('SITE_NOME')}}">
+            </div>
+        </a>
+    </div>
+    <ul class="list-unstyled components mb-5">
+        <li class="active">
+            <a href="{{url('admin/dashboard')}}" tooltip="tooltip" title=" Painel do Administrador"><span class="fa fa-home"></span>Admin
+        </li>
+        <li>
+            <a href="{{url('admin/posts/listar')}}" tooltip="tooltip" title="Administração de Posts">
+                <span class="fa-solid fa-file-pen"></span>Posts
+            </a>
+        </li>
+        <li>
+            <a href="{{url('admin/categorias/listar')}}" data-bs-toggle="tooltip" title="Administração de Categorias">
+                <span class="fa-solid fa-list"></span>Categorias
+            </a>
+        </li>
+        <li>
+            <a href="{{url('admin/usuarios/listar')}}" data-bs-toggle="tooltip" title="Administração de Usuários">
+                <span class="fa-solid fa-users"></span>Usuários
+            </a>
+        </li>
+    </ul>
+    <!-- <div class="footer">
+        <p>
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with
+            <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                target="_blank">Colorlib.com</a>
+        </p>
+    </div> -->
+</nav>

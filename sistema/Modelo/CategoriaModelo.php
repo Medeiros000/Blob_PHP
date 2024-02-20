@@ -26,6 +26,19 @@ class CategoriaModelo
 
     /**
      * @author Jr Medeiros
+     * @return array list active categories ordered by title asc
+     */
+    public function busca_admin(): array
+    {
+        $query = "select * from categorias order by id asc";
+        $stmt = Conexao::getInstancia()->query($query);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    /**
+     * @author Jr Medeiros
      * @return bool|object categories
      */
     public function buscaPorId(int $id): bool|object

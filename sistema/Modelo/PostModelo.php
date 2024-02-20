@@ -26,6 +26,19 @@ class PostModelo
 
     /**
      * @author Jr Medeiros
+     * @return array list active posts  ordered by id desc
+     */
+    public function busca_admin(): array
+    {
+        $query = "select p.*, c.title categoria from posts p inner join categorias c on categoria_id=c.id order by p.id asc";
+        $stmt = Conexao::getInstancia()->query($query);
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
+
+    /**
+     * @author Jr Medeiros
      * @return bool|object post by id
      */
     public function buscaPorId(int $id): bool|object
